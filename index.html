@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <html lang="ar">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ᐯᑎOE</title>
@@ -8,10 +10,6 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-       
-    <!-- Theme Button-->
-    <button id="theme-toggle-btn">theme change</button>
-  
     <script src="script.js"></script>
   </body>
   </html>
@@ -164,20 +162,26 @@
             </div>
         </section>
 
-        <section id="feedback" class="py-16">
+        <section id="feedback" class="py-16 bg-black-600 text-black">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">آراء العملاء</h2>
+                <form class="max-w-lg mx-auto"></form>
                 <form action="send_email.php" method="POST">
                     <label for="name">الاسم:</label>
-                    <input type="text" id="name" name="name" required><br><br>
+                    <div class="mb-4">
+                    <input type="text" id="name" name="name" class="w-full px-3 py-2 bg-white-500 text-white placeholder-blue-200 border border-white-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" required>
                 
                     <label for="email">البريد الإلكتروني:</label>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <div class="mb-4">
+                    <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-white-500 text-white placeholder-blue-200 border border-white-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" required>
                 
                     <label for="message">رأي العميل:</label><br>
-                    <textarea id="message" name="message" required></textarea><br><br>
+                    <div class="mb-4">
+                    <textarea id="message" name="message" class="w-full px-3 py-2 bg-white-500 text-white placeholder-blue-200 border border-white-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300" required></textarea>
                 
-                    <button type="submit">إرسال</button>
+                    <button type="submit" class="w-full bg-white text-white-600 py-2 rounded-md hover:bg-black-50 transition-colors">
+                        Send email
+                    </button>
                 </form>
                     </button>
                 </form>
